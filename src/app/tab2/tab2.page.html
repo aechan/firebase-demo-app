@@ -1,9 +1,23 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab Two
+      Firestore Demo
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <ion-card style="padding: 15px"><h3>This demo shows how to store and retrieve data in Firestore. You can add an image URL in the box below to add it to our collection and the document and corresponding ID will be retrieved from the database and displayed in a list below.</h3></ion-card>
+  <ion-item>
+    <ion-label position="floating">Add an image</ion-label>
+    <ion-input [(ngModel)]="itemUrl"></ion-input>
+  </ion-item>
+  <ion-button (click)="addItem()" style="margin-top: 10px" size="large" expand="block" shape="round" fill="outline" color="dark">Add</ion-button>
+  <ion-list>
+    <h2 *ngIf="!items || items.length === 0">No items to display 😢 try adding some.</h2>
+    <ion-item *ngFor="let item of items">
+      <ion-img [src]="item.url"></ion-img>
+      <ion-label>{{ item.id }}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
