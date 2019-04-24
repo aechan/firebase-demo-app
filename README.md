@@ -17,4 +17,4 @@ To set up the demo:
 2. CD to the downloaded code: `cd ./firebase-demo-app`
 3. Install dependencies: `npm i`
 4. Install Ionic `npm i -g ionic`
-5. Serve the demo app to your browser: `ionic serve` - will automatically open your default browser after transpilation.
+5. Serve the demo app to your browser (might have to close and reopen your shell/terminal after installing ionic for this to work): `ionic serve` - will automatically open your default browser after transpilation.
